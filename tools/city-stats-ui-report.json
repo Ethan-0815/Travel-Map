@@ -1,0 +1,541 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 320,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 320,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 320,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 360,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 360,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 360,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 360,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 390,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 390,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 390,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 390,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 600,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 600,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 600,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 600,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 768,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 768,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 768,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 768,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 769,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 769,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 769,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 769,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1280,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1280,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1280,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1280,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1920,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1920,
+      "scale": 1,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1920,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1920,
+      "scale": 1,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1600,
+      "scale": 0.8,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1600,
+      "scale": 0.8,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1600,
+      "scale": 0.8,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1600,
+      "scale": 0.8,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1.25,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1.25,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1.25,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 1024,
+      "scale": 1.25,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 853,
+      "scale": 1.5,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 853,
+      "scale": 1.5,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 853,
+      "scale": 1.5,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 853,
+      "scale": 1.5,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 731,
+      "scale": 1.75,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 731,
+      "scale": 1.75,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 731,
+      "scale": 1.75,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 731,
+      "scale": 1.75,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 640,
+      "scale": 2,
+      "theme": "light",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 640,
+      "scale": 2,
+      "theme": "light",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 640,
+      "scale": 2,
+      "theme": "dark",
+      "scrollbar": 8,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    },
+    {
+      "width": 640,
+      "scale": 2,
+      "theme": "dark",
+      "scrollbar": 20,
+      "errors": [],
+      "months": "12px",
+      "helper": "13px"
+    }
+  ],
+  "checks": [
+    "order",
+    "year filtering",
+    "totals",
+    "insights",
+    "heat",
+    "empty state",
+    "language switch",
+    "immutable records",
+    "English text at 320px",
+    "offline start and destination selection",
+    "waypoint record compatibility",
+    "localized country names",
+    "long country name wrapping"
+  ],
+  "selection": {
+    "offline": true,
+    "start": [
+      25.0207,
+      98.49
+    ],
+    "destination": [
+      -45.0312,
+      168.6626
+    ],
+    "waypoint": {
+      "role": "waypoint",
+      "lat": 29.2687,
+      "lng": 117.1784
+    },
+    "countries": "Chinese and English"
+  },
+  "status": "PASS"
+}

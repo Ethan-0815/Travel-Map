@@ -1,0 +1,42 @@
+/* Mobile keeps its original glass capsule, gutters and safe-area spacing. */
+@media (min-width: 769px) {
+  #app {
+    --content-gutter: max(24px, env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+    --content-inset: max(var(--content-gutter), calc((100% - var(--content-max, 1120px)) / 2));
+  }
+  /* One shared reading width, including the map's overlay content. */
+  #views .page-head,
+  #views .view-scroll {
+    width: calc(100% - var(--content-inset) * 2);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+  #views .timeline,
+  #views .stats-grid {
+    padding-inline: 0;
+  }
+  #views .timeline { --timeline-gutter: 0px; }
+  .tabbar,
+  .map-titlebar {
+    left: var(--content-inset);
+    right: var(--content-inset);
+  }
+  .map-titlebar {
+    padding-inline: 0;
+  }
+  .map-stats {
+    left: var(--content-inset);
+  }
+  .map-home-btn,
+  .map-add-btn {
+    right: var(--content-inset);
+  }
+  /* Buttons and the selection pill share three equal columns. */
+  .tabbar-item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

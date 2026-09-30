@@ -1,0 +1,74 @@
+{
+  "checks": [
+    "year-scoped canonical list",
+    "city name and country",
+    "all-time count and first/latest dates",
+    "photo ownership and deduplication",
+    "modal initial focus",
+    "exact journey details and ordered waypoint notes",
+    "browser Back to city",
+    "UI Back to original statistics position and focus",
+    "year retained",
+    "photo URL cleanup",
+    "compact no-photo state",
+    "Escape returns to statistics",
+    "late photo requests cleaned up",
+    "photo read failures stay compact",
+    "English details",
+    "source records unchanged",
+    "production router Back/Forward and multi-level return",
+    "production year and scroll retained",
+    "three original Tabs only"
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "theme": "light",
+      "dialogWidth": 288,
+      "dialogHeight": 557.671875
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "dialogWidth": 288,
+      "dialogHeight": 557.671875
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "dialogWidth": 358,
+      "dialogHeight": 581
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "dialogWidth": 358,
+      "dialogHeight": 581
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "dialogWidth": 520,
+      "dialogHeight": 592.5
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "dialogWidth": 520,
+      "dialogHeight": 592.5
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "dialogWidth": 520,
+      "dialogHeight": 592.5
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "dialogWidth": 520,
+      "dialogHeight": 592.5
+    }
+  ],
+  "status": "PASS"
+}

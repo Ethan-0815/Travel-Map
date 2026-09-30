@@ -1,0 +1,484 @@
+/* ============================================================
+   map.css — 地图容器 / 节点 / 路线 / 详情面板 / Replay 条
+   ============================================================ */
+
+.map-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* 地图舞台：仅承载 SVG，覆盖层（标题栏/统计卡等）在 map-root 上 */
+.map-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* 底图 Canvas 与交互 SVG 层叠 */
+.map-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.map-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+.map-svg.is-panning {
+  cursor: grabbing;
+}
+
+/* 城市节点 */
+.map-node {
+  cursor: pointer;
+  will-change: transform;
+}
+.map-node .node-core {
+  fill: var(--accent);
+}
+.map-node .node-halo {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1;
+  opacity: 0.35;
+}
+.map-node:hover .node-core {
+  transform-origin: center;
+}
+.map-node.is-active .node-core {
+  fill: var(--accent-strong);
+}
+
+/* 城市名标签（桌面 + 放大后显示） */
+.map-label {
+  fill: var(--text-2);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* 顶部悬浮标题 */
+.map-titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  padding-top: calc(16px + env(safe-area-inset-top, 0px));
+  pointer-events: none;
+  z-index: 10;
+}
+.map-titlebar .brand {
+  pointer-events: auto;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 1px 0 var(--surface);
+}
+.map-titlebar .brand .dot {
+  color: var(--accent);
+}
+
+.icon-btn {
+  pointer-events: auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+  transition: background var(--m-fast) var(--ease-out),
+    transform var(--m-fast) var(--ease-out);
+}
+.icon-btn:hover {
+  background: var(--surface-glass-strong);
+}
+.icon-btn:active {
+  transform: scale(0.94);
+}
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* 回到世界视角 */
+.map-home-btn {
+  position: absolute;
+  right: 16px;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + 66px);
+  z-index: 10;
+}
+
+/* 重放控制条 */
+.replay-bar {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + 16px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 8px 16px;
+  border-radius: 99px;
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-2);
+  z-index: 20;
+  white-space: nowrap;
+}
+.replay-bar .year {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  min-width: 44px;
+  text-align: center;
+}
+.replay-bar .year-slider {
+  width: 120px;
+  accent-color: var(--accent);
+}
+
+/* 详情面板 */
+.detail-panel {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-3);
+}
+
+/* 移动端：底部 sheet */
+@media (max-width: 768px) {
+  .detail-panel {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 78vh;
+    border-radius: 22px 22px 0 0;
+    border-bottom: none;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .detail-panel .grabber {
+    display: block;
+  }
+}
+
+/* 桌面：右侧面板 */
+@media (min-width: 769px) {
+  .detail-panel {
+    top: 16px;
+    right: 16px;
+    bottom: calc(var(--tabbar-h) + 16px);
+    width: 360px;
+    border-radius: 22px;
+  }
+  .detail-panel .grabber {
+    display: none;
+  }
+}
+
+.detail-panel .grabber {
+  width: 40px;
+  height: 4px;
+  border-radius: 99px;
+  background: var(--line-strong);
+  margin: 10px auto 2px;
+  flex-shrink: 0;
+}
+
+.detail-inner {
+  padding: 20px 24px 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.detail-place {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.detail-place .country {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+.detail-stat {
+  padding: 12px 8px;
+  border-radius: var(--r-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.detail-stat .v {
+  font-size: 20px;
+  font-weight: 650;
+  font-family: var(--font-mono);
+}
+.detail-stat .k {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.detail-memories h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  margin-bottom: 12px;
+}
+
+.memory-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.memory-item:last-child {
+  border-bottom: none;
+}
+.memory-item .date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-3);
+  white-space: nowrap;
+  padding-top: 1px;
+}
+.memory-item .note {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.detail-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.detail-photos img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 地图调暗（聚焦城市时） */
+.map-stage.is-focusing .map-svg {
+  filter: saturate(0.75) brightness(0.94) contrast(0.96);
+  transition: filter var(--m-slow) var(--ease-out);
+}
+
+/* 左下角统计卡片（杂志式：大数字 + 小标签） */
+.map-stats {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  left: 16px;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-2);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--m-slow) var(--ease-out),
+    transform var(--m-slow) var(--ease-out);
+}
+.map-stats.is-show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.map-stats .stat {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.map-stats .num {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.map-stats .k {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-3);
+  margin-top: 6px;
+}
+
+/* 「＋ 添加旅程」右下角悬浮胶囊按钮 */
+.map-add-btn {
+  position: absolute;
+  right: 16px;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px) + 16px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-2);
+  transition: transform var(--m-fast) var(--ease-out);
+}
+.map-add-btn:hover {
+  background: var(--accent-strong);
+}
+.map-add-btn:active {
+  transform: scale(0.96);
+}
+.map-add-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* 详情：首次到访 */
+.detail-first {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 16px 0 4px;
+}
+.detail-first .k {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+.detail-first .v {
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.detail-inner h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  margin: 18px 0 8px;
+}
+
+/* Replay 面板（居中玻璃卡片） */
+.replay-panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(320px, calc(100vw - 48px));
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 22px;
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-3);
+  z-index: 40;
+}
+.replay-panel .rp-title {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+.replay-panel .rp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.replay-panel .rp-row .input {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+/* 空状态（无旅行数据） */
+.map-empty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  z-index: 10;
+}
+.map-empty-title {
+  font-size: 16px;
+  font-weight: 550;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+}

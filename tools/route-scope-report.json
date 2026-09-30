@@ -1,0 +1,10 @@
+{
+  "Changed": [
+    "js/map/mapView.js",
+    "js/views/mapPage.js",
+    "css/components.css",
+    "css/responsive.css"
+  ],
+  "UnchangedSourceFiles": 32,
+  "ProtectedSourceCheck": "PASS"
+}

@@ -1,0 +1,246 @@
+{
+  "checks": [
+    "overview includes four metrics and capped city preview",
+    "bottom list removed",
+    "0–5 cities: real entries only, full metrics unaffected",
+    "upward entry animation",
+    "inside padding and drag protection",
+    "outside click exits downwards",
+    "native modal held until exit completes",
+    "scroll and focus restored after exit",
+    "Back button uses exit animation",
+    "journey backdrop closes full drill-down",
+    "nested journey upward entry and downward return",
+    "steady inter-layer backdrop",
+    "city content and focus restored after exit",
+    "rapid Back/Forward cannot close reopened detail",
+    "reduced-motion preference"
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "locale": "zh",
+      "theme": "light",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 320,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "theme": "light",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 600,
+      "locale": "zh",
+      "theme": "light",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 600,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 768,
+      "locale": "zh",
+      "theme": "light",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 768,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 769,
+      "locale": "zh",
+      "theme": "light",
+      "height": 143.5,
+      "cities": 4
+    },
+    {
+      "width": 769,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 143.5,
+      "cities": 4
+    },
+    {
+      "width": 1024,
+      "locale": "zh",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1024,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1280,
+      "locale": "zh",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1280,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1600,
+      "locale": "zh",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1600,
+      "locale": "zh",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "theme": "light",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "theme": "dark",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "theme": "light",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "theme": "dark",
+      "height": 219.5,
+      "cities": 4
+    },
+    {
+      "width": 600,
+      "locale": "en",
+      "theme": "light",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 600,
+      "locale": "en",
+      "theme": "dark",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "theme": "light",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "theme": "dark",
+      "height": 235.5,
+      "cities": 4
+    },
+    {
+      "width": 769,
+      "locale": "en",
+      "theme": "light",
+      "height": 143.5,
+      "cities": 4
+    },
+    {
+      "width": 769,
+      "locale": "en",
+      "theme": "dark",
+      "height": 143.5,
+      "cities": 4
+    },
+    {
+      "width": 1024,
+      "locale": "en",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1024,
+      "locale": "en",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1280,
+      "locale": "en",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1280,
+      "locale": "en",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1600,
+      "locale": "en",
+      "theme": "light",
+      "height": 151.5,
+      "cities": 4
+    },
+    {
+      "width": 1600,
+      "locale": "en",
+      "theme": "dark",
+      "height": 151.5,
+      "cities": 4
+    }
+  ],
+  "status": "PASS"
+}

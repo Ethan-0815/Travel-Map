@@ -1,0 +1,18 @@
+{
+  "scenario": "北京 → 上海 → 广州",
+  "status": "PASS",
+  "frames": 5436,
+  "maxHeadErrorPx": 0.00024899862412688847,
+  "pauseObservedMs": 29496,
+  "actualDurationMs": [
+    3583,
+    3733
+  ],
+  "failures": [],
+  "resizeTest": true,
+  "progress": [
+    1,
+    1
+  ],
+  "waiting": false
+}

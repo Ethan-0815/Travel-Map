@@ -1,0 +1,32 @@
+[
+  {
+    "button": "rgba(213, 91, 100, 0.86)",
+    "pill": "rgba(213, 91, 100, 0.16)",
+    "pressed": 1,
+    "selected": "red"
+  },
+  {
+    "button": "rgba(213, 170, 57, 0.86)",
+    "pill": "rgba(213, 170, 57, 0.16)",
+    "pressed": 1,
+    "selected": "yellow"
+  },
+  {
+    "button": "rgba(69, 151, 113, 0.86)",
+    "pill": "rgba(69, 151, 113, 0.16)",
+    "pressed": 1,
+    "selected": "green"
+  },
+  {
+    "button": "rgba(224, 155, 87, 0.86)",
+    "pill": "rgba(224, 155, 87, 0.16)",
+    "pressed": 1,
+    "selected": "orange"
+  },
+  {
+    "button": "rgba(75, 137, 213, 0.86)",
+    "pill": "rgba(75, 137, 213, 0.16)",
+    "pressed": 1,
+    "selected": "blue"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E1989679E4762AA07AF3A43E79C6C242E1A53F61DF6ACFA40E171E3876604CB9",
+    "Path": "D:\\workbuddy\\Travel Map\\js\\data\\backup.js"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "281C1208C4C026641F162952AB6402B3DF2830EA237C7A795734A83C45B39410",
+    "Path": "D:\\workbuddy\\Travel Map\\js\\data\\db.js"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C9F2EF522F67869B101A57C6597FEAAFB6D5582C8C12D213B1FBFA131C7AAFAA",
+    "Path": "D:\\workbuddy\\Travel Map\\js\\data\\repo.js"
+  }
+]

@@ -1,0 +1,84 @@
+/* Shared Liquid Glass material. Geometry remains owned by existing components. */
+.tabbar, [data-theme="dark"] .tabbar,
+.icon-btn, .map-stats, .detail-panel, .replay-panel, .replay-bar,
+.map-add-btn, .btn, .mini-btn, .setting-row, .city-chip {
+  /* The backdrop supplies all variation: no highlight or reflection layer. */
+  background: var(--glass-fill, var(--glass-bg));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge, var(--glass-border));
+  box-shadow: var(--glass-shadow);
+}
+.map-stats, .detail-panel, .replay-panel, .setting-row {
+  --glass-fill: var(--glass-panel-bg);
+}
+.map-stats, .replay-panel, .setting-row {
+  border-radius: var(--glass-radius);
+}
+.map-add-btn, .btn-accent {
+  --glass-fill: var(--glass-action-bg);
+  --glass-edge: var(--accent-border);
+  color: var(--accent-strong);
+}
+.btn-primary {
+  --glass-fill: var(--text);
+}
+.btn-danger {
+  --glass-edge: rgba(214,69,69,0.3);
+}
+.icon-btn:hover, .map-add-btn:hover, .mini-btn:hover {
+  background: var(--glass-fill, var(--glass-panel-bg));
+}
+.tabbar-item { color: var(--text-2); }
+.tabbar-item.is-active { color: var(--accent-strong); }
+.setting-row .s-desc, .map-stats .k { color: var(--text-2); }
+.theme-colors {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.setting-colors {
+  flex-wrap: wrap;
+}
+.theme-color {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 12px;
+  transition: background 160ms, transform 160ms;
+}
+.theme-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.theme-color[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+}
+.theme-color:active { transform: scale(0.96); }
+.theme-color:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
+/* Dark-only hierarchy; keep palette hues and all component geometry unchanged. */
+[data-theme="dark"] .stats-page .stl-title,
+[data-theme="dark"] .city-row-name,
+[data-theme="dark"] .tl-name { color: var(--text); }
+[data-theme="dark"] .stats-page .stl-date,
+[data-theme="dark"] .stats-page .stl-month,
+[data-theme="dark"] .city-detail-hint { color: var(--text-3); }
+[data-theme="dark"] .input::placeholder,
+[data-theme="dark"] .textarea::placeholder { color: var(--text-3); opacity: 1; }
+[data-theme="dark"] .btn-danger { color: var(--danger); --glass-edge: rgba(239, 147, 147, 0.38); }
+[data-theme="dark"] .input:focus,
+[data-theme="dark"] .textarea:focus,
+[data-theme="dark"] .select:focus { border-color: var(--accent-strong); }
+@supports not (backdrop-filter: blur(1px)) {
+  .tabbar, [data-theme="dark"] .tabbar, .icon-btn, .map-stats,
+  .detail-panel, .replay-panel, .replay-bar, .setting-row, .map-add-btn, .btn, .mini-btn, .city-chip {
+    background: var(--surface);
+  }
+}
