@@ -8,6 +8,13 @@
 
 打开 → 看到自己的世界 → 点击城市 → 查看旅行记录 → 回忆自己的足迹。
 
+<p align="center">
+  <img src="screenshots/01-map.jpg" width="24%" alt="地图 · 足迹与航线" />
+  <img src="screenshots/02-journeys.jpg" width="24%" alt="旅程 · 垂直时间线" />
+  <img src="screenshots/03-stats.jpg" width="24%" alt="统计 · 旅行洞察" />
+  <img src="screenshots/04-settings.jpg" width="24%" alt="设置 · 主题与数据" />
+</p>
+
 ---
 
 ## Features
